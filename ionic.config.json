@@ -1,0 +1,7 @@
+{
+  "name": "IonicPhpMySql",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
