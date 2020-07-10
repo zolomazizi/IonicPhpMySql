@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="padding">
+    
+    <div class="logo">
+      <ion-icon color="light" name="sunny"></ion-icon>
+      <!-- <ion-icon color="light" name="contact"></ion-icon> -->
+      <!-- <ion-icon color="light" name="cloudy-night"></ion-icon> -->
+      <!-- <img src="../../assets/logo.png"> -->
+    </div>
+    <form #form="ngForm" (ngSubmit)="singUpUser()">
+      <ion-item >
+        <ion-label color="light">first Name</ion-label>
+        <ion-input color="light" name="name" type="text" aria-placeholder="first name" ngModel required></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label color="light"> last Name</ion-label>
+        <ion-input color="light" name="lastname" type="text" aria-placeholder="last name" ngModel required></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label color="light"> birth Date</ion-label>
+        <ion-input color="light" name="date" type="date" aria-placeholder="birthd Date" ngModel required></ion-input>
+      </ion-item>
+    <ion-item >
+      <ion-label color="light">Email</ion-label>
+      <ion-input color="light" name="email" type="email" aria-placeholder="your@email.com" ngModel required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="light">Paswword</ion-label>
+      <ion-input color="light" name="password" type="password" aria-placeholder="your password" ngModel required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="light">Confirme Password</ion-label>
+      <ion-input color="light" name="confirmepassword" type="password" aria-placeholder="confirme password" ngModel required></ion-input>
+    </ion-item>
+
+    
+    <ion-button color="light" expand="block" shape="round" fill="outline" type="submit" [disabled]="form.invalid">inscrez-vous</ion-button>
+    <ion-item lines="none">
+      <ion-label color="light" text-center>Log in if you are already registered</ion-label>
+    </ion-item>
+    <ion-button color="tertiary" expand="block" shape="round" (click) ="goToLogin()">login</ion-button>
+  </form>
+
+    
+    
+   
+
+    <ion-item lines="none">
+      <ion-label color="light" text-center>Ou inscrez-vous avec</ion-label>
+    </ion-item>
+    
+    <div class="flex">
+      <ion-button color="facebook" shape="round">
+        <ion-icon slot="start" name="logo-facebook"></ion-icon>
+        Facebook
+      </ion-button>
+      <ion-button color="google" color="youtube" shape="round">
+        <ion-icon slot="start" name="logo-google"></ion-icon>
+        Google
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>
